@@ -60,11 +60,11 @@ Partial Class Form1
         Label34 = New Label()
         Label35 = New Label()
         Label36 = New Label()
-        Label37 = New Label()
-        Label38 = New Label()
-        Label39 = New Label()
         Label40 = New Label()
         Label41 = New Label()
+        CheckBox1 = New CheckBox()
+        CheckBox2 = New CheckBox()
+        CheckBox3 = New CheckBox()
         SuspendLayout()
         ' 
         ' Timer1
@@ -412,36 +412,6 @@ Partial Class Form1
         Label36.TabIndex = 30
         Label36.Text = "Label36"
         ' 
-        ' Label37
-        ' 
-        Label37.AutoSize = True
-        Label37.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label37.Location = New Point(35, 40)
-        Label37.Name = "Label37"
-        Label37.Size = New Size(111, 20)
-        Label37.TabIndex = 36
-        Label37.Text = "Prod - GS0758"
-        ' 
-        ' Label38
-        ' 
-        Label38.AutoSize = True
-        Label38.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label38.Location = New Point(201, 40)
-        Label38.Name = "Label38"
-        Label38.Size = New Size(107, 20)
-        Label38.TabIndex = 37
-        Label38.Text = "Test - GS0757"
-        ' 
-        ' Label39
-        ' 
-        Label39.AutoSize = True
-        Label39.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label39.Location = New Point(377, 40)
-        Label39.Name = "Label39"
-        Label39.Size = New Size(105, 20)
-        Label39.TabIndex = 38
-        Label39.Text = "Dev - GS0756"
-        ' 
         ' Label40
         ' 
         Label40.AutoSize = True
@@ -460,16 +430,49 @@ Partial Class Form1
         Label41.TabIndex = 40
         Label41.Text = "Label41"
         ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CheckBox1.Location = New Point(36, 50)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(135, 25)
+        CheckBox1.TabIndex = 41
+        CheckBox1.Text = "Prod - GS0758"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CheckBox2.Location = New Point(202, 50)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(129, 25)
+        CheckBox2.TabIndex = 42
+        CheckBox2.Text = "Test - GS0757"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox3
+        ' 
+        CheckBox3.AutoSize = True
+        CheckBox3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CheckBox3.Location = New Point(377, 50)
+        CheckBox3.Name = "CheckBox3"
+        CheckBox3.Size = New Size(129, 25)
+        CheckBox3.TabIndex = 43
+        CheckBox3.Text = "Dev - GS0756"
+        CheckBox3.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(527, 213)
+        Controls.Add(CheckBox3)
+        Controls.Add(CheckBox2)
+        Controls.Add(CheckBox1)
         Controls.Add(Label41)
         Controls.Add(Label40)
-        Controls.Add(Label39)
-        Controls.Add(Label38)
-        Controls.Add(Label37)
         Controls.Add(Label31)
         Controls.Add(Label32)
         Controls.Add(Label33)
@@ -549,9 +552,9 @@ Partial Class Form1
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
 End Class
