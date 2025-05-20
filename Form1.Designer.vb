@@ -24,24 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Timer1 = New Timer(components)
-        Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
-        Label8 = New Label()
-        Label9 = New Label()
-        Label10 = New Label()
-        Label11 = New Label()
-        Label12 = New Label()
-        Label13 = New Label()
-        Label14 = New Label()
-        Label15 = New Label()
-        Label16 = New Label()
-        Label17 = New Label()
-        Label18 = New Label()
         Label19 = New Label()
         Label20 = New Label()
         Label21 = New Label()
@@ -65,172 +47,11 @@ Partial Class Form1
         CheckBox1 = New CheckBox()
         CheckBox2 = New CheckBox()
         CheckBox3 = New CheckBox()
+        Label1 = New Label()
         SuspendLayout()
         ' 
         ' Timer1
         ' 
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(88, 86)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(54, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "Beringen"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(88, 101)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(70, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Burghausen"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(88, 131)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(45, 15)
-        Label3.TabIndex = 3
-        Label3.Text = "Porvoo"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(88, 116)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(33, 15)
-        Label4.TabIndex = 2
-        Label4.Text = "Kallo"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(88, 161)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(77, 15)
-        Label5.TabIndex = 5
-        Label5.Text = "Stenungsund"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(88, 146)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(64, 15)
-        Label6.TabIndex = 4
-        Label6.Text = "Schwechat"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(254, 161)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(77, 15)
-        Label7.TabIndex = 11
-        Label7.Text = "Stenungsund"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(254, 146)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(64, 15)
-        Label8.TabIndex = 10
-        Label8.Text = "Schwechat"
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(254, 131)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(45, 15)
-        Label9.TabIndex = 9
-        Label9.Text = "Porvoo"
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Location = New Point(254, 116)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(33, 15)
-        Label10.TabIndex = 8
-        Label10.Text = "Kallo"
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Location = New Point(254, 101)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(70, 15)
-        Label11.TabIndex = 7
-        Label11.Text = "Burghausen"
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Location = New Point(254, 86)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(54, 15)
-        Label12.TabIndex = 6
-        Label12.Text = "Beringen"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Location = New Point(430, 161)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(77, 15)
-        Label13.TabIndex = 17
-        Label13.Text = "Stenungsund"
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Location = New Point(430, 146)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(64, 15)
-        Label14.TabIndex = 16
-        Label14.Text = "Schwechat"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Location = New Point(430, 131)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(45, 15)
-        Label15.TabIndex = 15
-        Label15.Text = "Porvoo"
-        ' 
-        ' Label16
-        ' 
-        Label16.AutoSize = True
-        Label16.Location = New Point(430, 116)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(33, 15)
-        Label16.TabIndex = 14
-        Label16.Text = "Kallo"
-        ' 
-        ' Label17
-        ' 
-        Label17.AutoSize = True
-        Label17.Location = New Point(430, 101)
-        Label17.Name = "Label17"
-        Label17.Size = New Size(70, 15)
-        Label17.TabIndex = 13
-        Label17.Text = "Burghausen"
-        ' 
-        ' Label18
-        ' 
-        Label18.AutoSize = True
-        Label18.Location = New Point(430, 86)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(54, 15)
-        Label18.TabIndex = 12
-        Label18.Text = "Beringen"
         ' 
         ' Label19
         ' 
@@ -463,11 +284,22 @@ Partial Class Form1
         CheckBox3.Text = "Dev - GS0756"
         CheckBox3.UseVisualStyleBackColor = True
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(77, 9)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(381, 32)
+        Label1.TabIndex = 44
+        Label1.Text = "Please Choose a Server to Check"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(527, 213)
+        Controls.Add(Label1)
         Controls.Add(CheckBox3)
         Controls.Add(CheckBox2)
         Controls.Add(CheckBox1)
@@ -491,24 +323,6 @@ Partial Class Form1
         Controls.Add(Label21)
         Controls.Add(Label20)
         Controls.Add(Label19)
-        Controls.Add(Label13)
-        Controls.Add(Label14)
-        Controls.Add(Label15)
-        Controls.Add(Label16)
-        Controls.Add(Label17)
-        Controls.Add(Label18)
-        Controls.Add(Label7)
-        Controls.Add(Label8)
-        Controls.Add(Label9)
-        Controls.Add(Label10)
-        Controls.Add(Label11)
-        Controls.Add(Label12)
-        Controls.Add(Label5)
-        Controls.Add(Label6)
-        Controls.Add(Label3)
-        Controls.Add(Label4)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
         Name = "Form1"
         Text = "Directory Monitor"
         ResumeLayout(False)
@@ -516,24 +330,6 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
@@ -557,4 +353,5 @@ Partial Class Form1
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents Label1 As Label
 End Class

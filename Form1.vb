@@ -6,7 +6,7 @@ Public Class Form1
         ' Initialize all labels
 
         'Version No set Here
-        Label41.Text = "v1.5"
+        Label41.Text = "v2.0"
 
         Dim labels As Label() = {Label19, Label20, Label21, Label22, Label23, Label24,
                          Label25, Label26, Label27, Label28, Label29, Label30,
@@ -23,84 +23,74 @@ Public Class Form1
         Timer1.Start()
     End Sub
 
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ' Define the directory paths for Prod, Test, and Dev
+        ' Clear all label text and set defaults
+        Dim allLabels As Label() = {
+        Label19, Label20, Label21, Label22, Label23, Label24,
+        Label25, Label26, Label27, Label28, Label29, Label30,
+        Label31, Label32, Label33, Label34, Label35, Label36
+    }
 
-        ' Initialize a dynamic list for paths
-        Dim basePathsList As New List(Of String)
+        For Each lbl In allLabels
+            lbl.Text = ""
+            lbl.Visible = True
+            lbl.ForeColor = Color.Black
+        Next
 
-        ' Set paths and colors based on checkbox states
+        ' Store which checkboxes are selected and their corresponding label offsets
+        Dim checkboxPaths As New List(Of Tuple(Of CheckBox, String, Integer))
+
         If CheckBox1.Checked Then
-            basePathsList.Add("\\GS0758\d$\RAPDATA\SAPtoRAP")
+            checkboxPaths.Add(Tuple.Create(CheckBox1, "C:\RAPDATA\Prod\SAPtoRAP", 0))
+            'checkboxPaths.Add(Tuple.Create(CheckBox1, "\\GS0758\d$\RAPDATA\SAPtoRAP", 0))
             CheckBox1.ForeColor = Color.Green
         Else
             CheckBox1.ForeColor = Color.Black
         End If
 
         If CheckBox2.Checked Then
-            basePathsList.Add("\\GS0757\d$\RAPDATA\SAPtoRAP")
+            checkboxPaths.Add(Tuple.Create(CheckBox2, "C:\RAPDATA\Test\SAPtoRAP", 6))
+            'checkboxPaths.Add(Tuple.Create(CheckBox2, "\\GS0757\d$\RAPDATA\SAPtoRAP", 6))
             CheckBox2.ForeColor = Color.Green
         Else
             CheckBox2.ForeColor = Color.Black
         End If
 
         If CheckBox3.Checked Then
-            basePathsList.Add("\\GS0756\d$\RAPDATA\SAPtoRAP")
+            checkboxPaths.Add(Tuple.Create(CheckBox3, "C:\RAPDATA\Dev\SAPtoRAP", 12))
+            'checkboxPaths.Add(Tuple.Create(CheckBox3, "\\GS0756\d$\RAPDATA\SAPtoRAP", 12))
             CheckBox3.ForeColor = Color.Green
         Else
             CheckBox3.ForeColor = Color.Black
         End If
 
-        ' Handle case where no boxes are checked
-        If basePathsList.Count = 0 Then
-            basePathsList.Add("")
-        End If
+        ' Loop over selected checkboxes and populate their label columns
+        For Each item In checkboxPaths
+            Dim path As String = item.Item2
+            Dim labelOffset As Integer = item.Item3
 
-        ' Convert to array if needed
-        Dim basePaths As String() = basePathsList.ToArray()
+            If Directory.Exists(path) Then
+                Dim folders = Directory.GetDirectories(path)
 
+                For i As Integer = 0 To Math.Min(folders.Length - 1, 5)
+                    Dim fullPath As String = folders(i)
+                    Dim folderName As String = System.IO.Path.GetFileName(System.IO.Path.TrimEndingDirectorySeparator(fullPath))
+                    Dim fileCount As Integer = Directory.GetFiles(fullPath, "*.*").Length
 
+                    Dim targetLabel As Label = allLabels(labelOffset + i)
+                    targetLabel.Text = folderName
 
-        ' Define locations for each set of directories
-        Dim locations As String() = {
-            "Beringen", "Burghausen", "Kallo", "Porvoo", "Schwechat", "Stenungsund"
-        }
-
-        ' Define a start index for labels (starting from Label19)
-        Dim labelIndex As Integer = 19
-
-        ' Iterate through each base path (Prod, Test, Dev)
-        For Each basePath As String In basePaths
-            ' Iterate through each location
-
-            For Each location As String In locations
-                ' Construct the full directory path
-                Dim fullPath As String = Path.Combine(basePath, location)
-
-                ' Check if the directory exists and update the corresponding label
-                If Directory.Exists(fullPath) Then
-                    Me.Controls("Label" & labelIndex).ForeColor = Color.Green
-
-                    Me.Controls("Label" & labelIndex).Text = Directory.GetFiles(fullPath, "*.*").Count.ToString()
-                    If Directory.GetFiles(fullPath, "*.*").Count.ToString() > 0 Then
-                        Me.Controls("Label" & labelIndex).ForeColor = Color.Red
-                        'Flash Me
-                        Me.Controls("Label" & labelIndex).Visible = Not Me.Controls("Label" & labelIndex).Visible
+                    If fileCount > 0 Then
+                        targetLabel.ForeColor = Color.Red
                     Else
-                        Me.Controls("Label" & labelIndex).ForeColor = Color.Green
-                        Me.Controls("Label" & labelIndex).Visible = True
+                        targetLabel.ForeColor = Color.Black
                     End If
+                Next
 
 
 
-
-                Else
-                    Me.Controls("Label" & labelIndex).ForeColor = Color.Red
-                    Me.Controls("Label" & labelIndex).Text = "N/A"
-                End If
-
-                labelIndex += 1
-            Next
+            End If
         Next
     End Sub
 
