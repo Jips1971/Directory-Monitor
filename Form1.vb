@@ -43,24 +43,24 @@ Public Class Form1
         Dim checkboxPaths As New List(Of Tuple(Of CheckBox, String, Integer))
 
         If CheckBox1.Checked Then
-            checkboxPaths.Add(Tuple.Create(CheckBox1, "C:\RAPDATA\Prod\SAPtoRAP", 0))
-            'checkboxPaths.Add(Tuple.Create(CheckBox1, "\\GS0758\d$\RAPDATA\SAPtoRAP", 0))
+            'checkboxPaths.Add(Tuple.Create(CheckBox1, "C:\RAPDATA\Prod\SAPtoRAP", 0))
+            checkboxPaths.Add(Tuple.Create(CheckBox1, "\\GS0758\d$\RAPDATA\SAPtoRAP", 0))
             CheckBox1.ForeColor = Color.Green
         Else
             CheckBox1.ForeColor = Color.Black
         End If
 
         If CheckBox2.Checked Then
-            checkboxPaths.Add(Tuple.Create(CheckBox2, "C:\RAPDATA\Test\SAPtoRAP", 6))
-            'checkboxPaths.Add(Tuple.Create(CheckBox2, "\\GS0757\d$\RAPDATA\SAPtoRAP", 6))
+            'checkboxPaths.Add(Tuple.Create(CheckBox2, "C:\RAPDATA\Test\SAPtoRAP", 6))
+            checkboxPaths.Add(Tuple.Create(CheckBox2, "\\GS0757\d$\RAPDATA\SAPtoRAP", 6))
             CheckBox2.ForeColor = Color.Green
         Else
             CheckBox2.ForeColor = Color.Black
         End If
 
         If CheckBox3.Checked Then
-            checkboxPaths.Add(Tuple.Create(CheckBox3, "C:\RAPDATA\Dev\SAPtoRAP", 12))
-            'checkboxPaths.Add(Tuple.Create(CheckBox3, "\\GS0756\d$\RAPDATA\SAPtoRAP", 12))
+            'checkboxPaths.Add(Tuple.Create(CheckBox3, "C:\RAPDATA\Dev\SAPtoRAP", 12))
+            checkboxPaths.Add(Tuple.Create(CheckBox3, "\\GS0756\d$\RAPDATA\SAPtoRAP", 12))
             CheckBox3.ForeColor = Color.Green
         Else
             CheckBox3.ForeColor = Color.Black
@@ -99,12 +99,12 @@ Public Class Form1
 
     Private Sub CopyFailedFiles()
         Dim locations As String() = {
-        "D:\RAPDATA\Beringen\",
-        "D:\RAPDATA\Kallo\",
-        "D:\RAPDATA\Porvoo\",
-        "D:\RAPDATA\Burghausen\",
-        "D:\RAPDATA\Schwechat\",
-        "D:\RAPDATA\Stenungsund\"
+        "D:\RAPDATA\SAPtoRAP\Beringen\",
+        "D:\RAPDATA\SAPtoRAP\Kallo\",
+        "D:\RAPDATA\SAPtoRAP\Porvoo\",
+        "D:\RAPDATA\SAPtoRAP\Burghausen\",
+        "D:\RAPDATA\SAPtoRAP\Schwechat\",
+        "D:\RAPDATA\SAPtoRAP\Stenungsund\"
     }
 
         For Each folderPath In locations
