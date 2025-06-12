@@ -48,6 +48,7 @@ Partial Class Form1
         CheckBox2 = New CheckBox()
         CheckBox3 = New CheckBox()
         Label1 = New Label()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' Timer1
@@ -236,16 +237,16 @@ Partial Class Form1
         ' Label40
         ' 
         Label40.AutoSize = True
-        Label40.Location = New Point(370, 193)
+        Label40.Location = New Point(7, 9)
         Label40.Name = "Label40"
-        Label40.Size = New Size(64, 15)
+        Label40.Size = New Size(14, 15)
         Label40.TabIndex = 39
-        Label40.Text = "Version No"
+        Label40.Text = "V"
         ' 
         ' Label41
         ' 
         Label41.AutoSize = True
-        Label41.Location = New Point(433, 193)
+        Label41.Location = New Point(17, 9)
         Label41.Name = "Label41"
         Label41.Size = New Size(47, 15)
         Label41.TabIndex = 40
@@ -294,11 +295,21 @@ Partial Class Form1
         Label1.TabIndex = 44
         Label1.Text = "Please Choose a Server to Check"
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(35, 202)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(136, 23)
+        Button1.TabIndex = 45
+        Button1.Text = "Fix Failed Files"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(527, 213)
+        ClientSize = New Size(527, 273)
+        Controls.Add(Button1)
         Controls.Add(Label1)
         Controls.Add(CheckBox3)
         Controls.Add(CheckBox2)
@@ -354,4 +365,5 @@ Partial Class Form1
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

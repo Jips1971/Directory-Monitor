@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Net.WebRequestMethods
 Imports System.Reflection.Metadata.Ecma335
 
 Public Class Form1
@@ -6,7 +7,7 @@ Public Class Form1
         ' Initialize all labels
 
         'Version No set Here
-        Label41.Text = "v2.0"
+        Label41.Text = "v2.1"
 
         Dim labels As Label() = {Label19, Label20, Label21, Label22, Label23, Label24,
                          Label25, Label26, Label27, Label28, Label29, Label30,
@@ -95,4 +96,49 @@ Public Class Form1
     End Sub
 
 
+
+    Private Sub CopyFailedFiles()
+        Dim locations As String() = {
+        "D:\RAPDATA\Beringen\",
+        "D:\RAPDATA\Kallo\",
+        "D:\RAPDATA\Porvoo\",
+        "D:\RAPDATA\Burghausen\",
+        "D:\RAPDATA\Schwechat\",
+        "D:\RAPDATA\Stenungsund\"
+    }
+
+        For Each folderPath In locations
+            ProcessFolder(folderPath)
+        Next
+    End Sub
+
+    Private Sub ProcessFolder(folderPath As String)
+        Dim failedPath As String = Path.Combine(folderPath, "Failed")
+
+        If Not My.Computer.FileSystem.DirectoryExists(folderPath) Then Exit Sub
+
+        ' Delete all .error files
+        For Each errorFile In Directory.GetFiles(folderPath, "*.error")
+            My.Computer.FileSystem.DeleteFile(errorFile)
+        Next
+
+        ' Copy .csv files from Failed to main folder
+        If My.Computer.FileSystem.DirectoryExists(failedPath) Then
+            For Each csvFile In Directory.GetFiles(failedPath, "*.csv")
+                Dim fileName = Path.GetFileName(csvFile)
+                Dim destPath = Path.Combine(folderPath, fileName)
+                My.Computer.FileSystem.CopyFile(csvFile, destPath, True)
+            Next
+
+            ' Delete the .csv files from the Failed folder after copying
+            For Each copiedFile In Directory.GetFiles(failedPath, "*.csv")
+                My.Computer.FileSystem.DeleteFile(copiedFile)
+            Next
+        End If
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        CopyFailedFiles()
+    End Sub
 End Class
