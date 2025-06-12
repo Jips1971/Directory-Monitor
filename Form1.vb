@@ -99,12 +99,12 @@ Public Class Form1
 
     Private Sub CopyFailedFiles()
         Dim locations As String() = {
-        "D:\RAPDATA\SAPtoRAP\Beringen\",
-        "D:\RAPDATA\SAPtoRAP\Kallo\",
-        "D:\RAPDATA\SAPtoRAP\Porvoo\",
-        "D:\RAPDATA\SAPtoRAP\Burghausen\",
-        "D:\RAPDATA\SAPtoRAP\Schwechat\",
-        "D:\RAPDATA\SAPtoRAP\Stenungsund\"
+        "\\GS0758\d$\RAPDATA\SAPtoRAP\Beringen\",
+        "\\GS0758\d$\RAPDATA\SAPtoRAP\Kallo\",
+        "\\GS0758\d$\RAPDATA\SAPtoRAP\Porvoo\",
+        "\\GS0758\d$\RAPDATA\SAPtoRAP\Burghausen\",
+        "\\GS0758\d$\RAPDATA\SAPtoRAP\Schwechat\",
+        "\\GS0758\d$\RAPDATA\SAPtoRAP\Stenungsund\"
     }
 
         For Each folderPath In locations
